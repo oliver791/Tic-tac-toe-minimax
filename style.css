@@ -1,0 +1,297 @@
+/* ============================
+   RESET & BASE
+   ============================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, #9ac9da, white);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  font-family: Arial, Verdana, sans-serif;
+}
+
+/* ============================
+   TITRE
+   ============================ */
+
+h1 {
+  color: #990000;
+  background-color: #fadafa;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+  border-top: thin solid #8EA2C6;
+  border-bottom: thin solid #8EA2C6;
+  margin-top: 80px;
+}
+
+/* ============================
+   CONTRÔLES & BOUTONS
+   ============================ */
+
+.controls {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.btn {
+  border-radius: 20px;
+  padding: 4px 14px;
+  color: #9ac9da;
+  background-color: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 2px;
+}
+
+.btn:hover {
+  color: blue;
+}
+
+/* ============================
+   GRILLE DE JEU
+   ============================ */
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 4px;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  font-size: 35pt;
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  user-select: none;
+  transition: border-color 0.2s;
+}
+
+.cell:hover {
+  border-color: #ba55d3;
+}
+
+.cell.human {
+  color: red;
+}
+
+.cell.computer {
+  color: green;
+}
+
+/* ============================
+   SCORES
+   ============================ */
+
+.hidden {
+  display: none;
+}
+
+#score-board {
+  text-align: center;
+  margin: 15px auto;
+}
+
+#score-table {
+  margin: 0 auto;
+  border-spacing: 8px;
+}
+
+.score-value {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  width: 40px;
+}
+
+.score-value.human {
+  color: red;
+}
+
+.score-value.computer {
+  color: green;
+}
+
+.score-value.draw {
+  color: rgb(31, 62, 197);
+}
+
+/* ============================
+   TIMER
+   ============================ */
+
+#timer-display {
+  text-align: center;
+  margin: 10px auto;
+  opacity: 0.6;
+}
+
+#timer-text {
+  font-style: italic;
+  color: #555;
+}
+
+/* ============================
+   ÉLÉMENTS DÉCORATIFS
+   ============================ */
+
+/* Soleil */
+#sun {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 3.5em;
+  height: 3.5em;
+  background-color: yellow;
+  border-radius: 50%;
+  border: 1px solid #FFFACD;
+  box-shadow: #FFFACD 0 0 100px 20px;
+  animation: shining 5s linear infinite;
+}
+
+@keyframes shining {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.8; }
+}
+
+/* Nuages */
+.cloud {
+  background: white;
+  opacity: 0.9;
+  border-radius: 100px / 50px;
+  position: absolute;
+}
+
+#cloud1 {
+  width: 200px;
+  height: 100px;
+  top: 7%;
+  left: -13px;
+  animation: moveCloud 40s linear infinite;
+}
+
+#cloud2 {
+  width: 300px;
+  height: 90px;
+  top: 1%;
+  left: -10px;
+  animation: moveCloud 60s linear infinite;
+}
+
+#cloud3 {
+  width: 450px;
+  height: 100px;
+  top: 10%;
+  left: -5px;
+  animation: moveCloud 80s linear infinite;
+}
+
+@keyframes moveCloud {
+  0%   { transform: translateX(1950px); opacity: 1; }
+  100% { transform: translateX(-50px); opacity: 0; }
+}
+
+/* Yeux du nuage */
+.eye {
+  position: absolute;
+  top: 20%;
+  height: 10px;
+  width: 3px;
+  background-color: #428BCA;
+  border-radius: 150px;
+  animation: blink 8s infinite;
+}
+
+.eye-left  { left: 40%; }
+.eye-right { right: 40%; }
+
+@keyframes blink {
+  2%  { height: 7px; top: 21%; }
+  4%  { height: 10px; top: 20%; }
+  6%  { height: 7px; top: 21%; }
+  8%  { height: 10px; top: 20%; }
+}
+
+/* Étoile */
+#star {
+  width: 90px;
+  height: 90px;
+  background-color: yellow;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
+    50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+  );
+  position: absolute;
+  top: 25%;
+  left: 2%;
+  opacity: 0.15;
+  animation: rotateStar 5s linear infinite;
+}
+
+#star:hover {
+  animation-play-state: paused;
+}
+
+@keyframes rotateStar {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+/* Montagne */
+.mountain {
+  width: 500px;
+  height: 500px;
+  clip-path: polygon(0% 100%, 46% 15%, 74% 64%, 61% 41%, 67% 31%, 100% 100%);
+  position: absolute;
+  top: 42%;
+  left: 69%;
+  background-color: white;
+  pointer-events: none;
+}
+
+/* ============================
+   RESPONSIVE (mobile)
+   ============================ */
+
+@media (max-width: 1024px) {
+  h1 {
+    margin-top: 20px;
+    font-size: 28px;
+  }
+
+  #sun {
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  #star {
+    top: 52%;
+    width: 75px;
+    height: 75px;
+    left: 48%;
+    background-color: white;
+    opacity: 0.6;
+  }
+}

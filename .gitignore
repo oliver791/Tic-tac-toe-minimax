@@ -1,0 +1,17 @@
+# === Windows ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === macOS (au cas où quelqu'un clone ton repo sur Mac) ===
+.DS_Store
+
+# === Éditeurs de code ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# === Divers ===
+*.log
+*.tmp

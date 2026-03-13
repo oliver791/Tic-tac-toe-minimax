@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Éléments décoratifs -->
+  <div id="sun"></div>
+
+  <div class="cloud" id="cloud1"></div>
+  <div class="cloud" id="cloud2">
+    <div class="eye eye-left"></div>
+    <div class="eye eye-right"></div>
+  </div>
+  <div class="cloud" id="cloud3"></div>
+
+  <div id="star"></div>
+  <div class="mountain"></div>
+
+  <!-- Titre -->
+  <h1>Tic Tac Toe</h1>
+
+  <!-- Barre de contrôle -->
+  <div class="controls">
+    <button class="btn" id="btn-fr" onclick="setLanguage('fr')">Français</button>
+    <button class="btn" id="btn-en" onclick="setLanguage('en')">English</button>
+    <button class="btn" id="btn-scores" onclick="toggleScore()">Scores</button>
+    <button class="btn" id="btn-timer" onclick="toggleTimer()">Minuteur</button>
+  </div>
+
+  <!-- Grille de jeu -->
+  <div id="grid">
+    <div class="cell" data-index="0"></div>
+    <div class="cell" data-index="1"></div>
+    <div class="cell" data-index="2"></div>
+    <div class="cell" data-index="3"></div>
+    <div class="cell" data-index="4"></div>
+    <div class="cell" data-index="5"></div>
+    <div class="cell" data-index="6"></div>
+    <div class="cell" data-index="7"></div>
+    <div class="cell" data-index="8"></div>
+  </div>
+
+  <!-- Boutons de démarrage -->
+  <div class="controls">
+    <button class="btn" id="btn-human-start" onclick="humanStart()">Je commence</button>
+    <button class="btn" id="btn-computer-start" onclick="computerStart()">L'ordinateur commence</button>
+  </div>
+
+  <!-- Tableau des scores -->
+  <div id="score-board" class="hidden">
+    <table id="score-table">
+      <tr>
+        <td class="score-value human" id="score-human">0</td>
+        <td id="label-human">Ton score</td>
+      </tr>
+      <tr>
+        <td class="score-value computer" id="score-computer">0</td>
+        <td id="label-computer">Score de l'ordinateur</td>
+      </tr>
+      <tr>
+        <td class="score-value draw" id="score-draw">0</td>
+        <td id="label-draw">Égalité</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Affichage du timer -->
+  <div id="timer-display" class="hidden">
+    <p id="timer-text">Temps de jeu</p>
+  </div>
+
+  <script src="tictactoe.js"></script>
+</body>
+</html>
