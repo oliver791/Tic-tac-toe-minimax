@@ -74,23 +74,17 @@ tic-tac-toe-minimax/
 
 ## 🚀 Getting Started
 
-No build tools, no dependencies — just open it in a browser.
+### Play Online
 
-### Option 1 — Local
+👉 **[Play the game here](https://oliver791.github.io/tic-tac-toe-minimax/)**
+
+### Run Locally
 
 ```bash
 git clone https://github.com/oliver791/tic-tac-toe-minimax.git
 cd tic-tac-toe-minimax
 open index.html
-```
 
-### Option 2 — GitHub Pages
-
-You can also deploy it for free with [GitHub Pages](https://pages.github.com/):
-
-1. Go to your repo **Settings** → **Pages**
-2. Under **Source**, select `main` branch and `/ (root)`
-3. Your game will be live at `https://oliver791.github.io/tic-tac-toe-minimax/`
 
 ---
 
