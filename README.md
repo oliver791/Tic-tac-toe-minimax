@@ -84,7 +84,7 @@ tic-tac-toe-minimax/
 git clone https://github.com/oliver791/tic-tac-toe-minimax.git
 cd tic-tac-toe-minimax
 open index.html
-
+```
 
 ---
 
