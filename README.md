@@ -61,13 +61,14 @@ Since Tic-Tac-Toe has a small search space (≤ 362,880 nodes), the algorithm ru
 
 ## 📁 Project Structure
 ```
-tic-tac-toe-minimax/
-├── index.html      # Game page (grid, controls, decorative elements)
-├── style.css       # Styling, animations, responsive layout
-├── game.js         # Game logic, Minimax AI, score &amp; timer
+Tictactoe/
 ├── img/
 │   └── screenshot.png
-└── README.md
+├── .gitignore
+├── index.html
+├── README.md
+├── style.css
+└── tictactoe.js
 ```
 
 ---
