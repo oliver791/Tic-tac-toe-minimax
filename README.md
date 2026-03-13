@@ -77,7 +77,7 @@ Tictactoe/
 
 ### Play Online
 
-👉 **[Play the game here](https://oliver791.github.io/tic-tac-toe-minimax/)**
+👉 **[Play the game here](https://oliver791.github.io/Tic-tac-toe-minimax/)**
 
 ### Run Locally
 
